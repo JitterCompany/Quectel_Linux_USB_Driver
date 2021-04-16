@@ -242,6 +242,7 @@ static void option_instat_callback(struct urb *urb);
 #define QUECTEL_PRODUCT_EC21			0x0121
 #define QUECTEL_PRODUCT_EC25			0x0125
 #define QUECTEL_PRODUCT_BG96			0x0296
+#define QUECTEL_PRODUCT_BG95			0x0700
 #define QUECTEL_PRODUCT_AG35      0x0435
 #define QUECTEL_PRODUCT_EX06      0x0435
 #define QUECTEL_PRODUCT_EG95      0x0195
@@ -1206,6 +1207,8 @@ static const struct usb_device_id option_ids[] = {
 	{ USB_DEVICE(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_EC25),
 	  .driver_info = (kernel_ulong_t)&net_intf4_blacklist },
 	{ USB_DEVICE(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_BG96),
+	  .driver_info = (kernel_ulong_t)&net_intf4_blacklist },
+	{ USB_DEVICE(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_BG95),
 	  .driver_info = (kernel_ulong_t)&net_intf4_blacklist },
   { USB_DEVICE(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_AG35),
     .driver_info = (kernel_ulong_t)&net_intf4_blacklist },
